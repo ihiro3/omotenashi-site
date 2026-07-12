@@ -23,7 +23,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   site: process.env.SITE_URL || 'https://nature-club-site.vercel.app',
-  base: '/',
+  base: process.env.BASE_URL || '/',
   output: 'static',
 
   integrations: [
