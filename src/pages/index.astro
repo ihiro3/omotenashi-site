@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/PageLayout.astro';
+import { getPermalink } from '../utils/permalinks.ts';
 
 const metadata = {
   title: 'OMOTENASHI - Miki Inoue | Travel Interpreter Guide',
@@ -13,7 +14,7 @@ const metadata = {
   <!-- Hero Section -->
   <section
     id="home"
-    class="relative scroll-mt-32 pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-20 lg:pb-20 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950 dark:to-pink-900"
+    class="relative scroll-mt-32 -mt-16 pt-20 pb-12 sm:-mt-20 sm:pt-24 sm:pb-16 lg:pt-20 lg:pb-20 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950 dark:to-pink-900"
   >
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -295,7 +296,7 @@ const metadata = {
         Let's create your perfect custom tour together. Contact me to start planning your Japanese adventure.
       </p>
       <a
-        href="/contact"
+        href={getPermalink('/contact')}
         class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-pink-700 bg-white rounded-xl shadow-md hover:bg-pink-50 transition-colors"
       >
         Contact Miki Inoue

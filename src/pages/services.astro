@@ -5,6 +5,7 @@ import Features2 from '../components/widgets/Features2.astro';
 import Hero from '../components/widgets/Hero.astro';
 import Testimonials from '../components/widgets/Testimonials.astro';
 import Layout from '../layouts/PageLayout.astro';
+import { getPermalink } from '../utils/permalinks.ts';
 
 const metadata = {
   title: 'Services | OMOTENASHI - Miki Inoue',
@@ -31,7 +32,7 @@ const testimonialImageMark =
     tagline="Services"
     title="Discover Japan Your Way"
     subtitle="Experience authentic Japan through personalized guided tours. From cultural immersion to hidden local gems, I craft custom experiences tailored to your interests and schedule."
-    actions={[{ variant: 'primary', target: '_self', text: 'Contact Me', href: '/contact' }]}
+    actions={[{ variant: 'primary', target: '_self', text: 'Contact Me', href: getPermalink('/contact') }]}
     image={{
       src: heroImage,
       alt: 'Japan travel experience',

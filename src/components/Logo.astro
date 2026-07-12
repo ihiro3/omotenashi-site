@@ -1,7 +1,7 @@
 ---
-
+import { getPermalink } from '../utils/permalinks.ts';
 ---
 
-<a class="flex items-center" href="/">
+<a class="flex items-center" href={getPermalink('/')}>
   <span class="text-2xl font-bold text-pink-600 dark:text-pink-400">OMOTENASHI</span>
 </a>

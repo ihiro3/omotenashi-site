@@ -1,12 +1,12 @@
 ---
-
+import { getPermalink } from '../../utils/permalinks.ts';
 ---
 
 <div
   class="text-muted text-sm bg-pink-50 dark:bg-slate-800 dark:text-slate-400 hidden md:block overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
 >
   <span class="bg-pink-600 font-semibold px-1 py-0.5 text-white text-xs inline-block mr-2">OPEN</span>
-  <a href="/contact" class="text-muted hover:underline dark:text-slate-400 font-medium"
+  <a href={getPermalink('/contact')} class="text-muted hover:underline dark:text-slate-400 font-medium"
     >Custom private tours available - Book your Japanese adventure today! »</a
   >
 </div>
