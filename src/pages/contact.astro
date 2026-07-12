@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/PageLayout.astro';
+import ContactUs from '../components/widgets/Contact.astro';
+import Hero from '../components/widgets/Hero.astro';
+import Features2 from '../components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'お問い合わせ・事務所案内 | 精華町議会 爽風会',
+};
+
+const heroImage =
+  'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+---
+
+<Layout metadata={metadata}>
+  {/* 1. ページの見出し */}
+  <Hero
+    tagline="Contact"
+    image={{
+      src: heroImage,
+      alt: 'お問い合わせ',
+    }}
+  >
+    <Fragment slot="title">
+      問い合わせ・<br />
+      <span class="text-accent dark:text-white highlight">事務局案内</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> 町政に関するご相談や、地域の課題についてお気軽にご連絡ください。 </Fragment>
+  </Hero>
+
+  {/* 2. 事務所情報（追加部分） */}
+  <Features2
+    title="精華町議会 爽風会"
+    subtitle="町政に関するご相談や、地域の課題についてお気軽にご連絡ください。"
+    items={[
+      {
+        title: '所在地',
+        description: '〒619-0237<br />京都府相楽郡精華町精華台1丁目<br />精華町議会 爽風会',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: '電話',
+        description: '精華町議会 爽風会: 0774-93-2150<br />（代表：岡田三郎）',
+        icon: 'tabler:phone',
+      },
+      {
+        title: '受付時間',
+        description: '議会開催日: 9:00 〜 17:00<br />（土日祝・年末年始を除く）',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  {/* 3. メッセージ送信フォーム（以前のものも残した状態） */}
+  <ContactUs
+    id="form"
+    title="メッセージを送る"
+    subtitle="地域の皆様の声が、より良い街づくりの原動力です。"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'お名前',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'メールアドレス',
+      },
+    ]}
+    textarea={{
+      label: 'メッセージ内容',
+    }}
+    disclaimer={{
+      label: '送信いただいた個人情報は、お問い合わせへの回答のみに使用いたします。',
+    }}
+    button="メッセージを送信する（Google フォームへ）"
+  />
+
+  {/* 補足：フォームの動作について */}
+  <div class="max-w-3xl mx-auto text-center pb-24 px-4">
+    <p class="text-sm text-gray-500">※ 上記ボタンを押すと、安全にメッセージを届けるため Google フォームが開きます。</p>
+  </div>
+</Layout>

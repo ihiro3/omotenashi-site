@@ -1,0 +1,53 @@
+# サイト全体の基本情報
+site:
+  name: 'せいか自然観察倶楽部'
+  site: 'https://nature-club-site.vercel.app'
+  base: '/'
+  trailingSlash: false
+
+  title: 'せいか自然観察倶楽部'
+  description: '精華町の未来を切り拓く。爽風会の活動報告、政策、プロフィールをお届けします。代表：岡田三郎、経理責任者：辻井崇余、メンバー：尾崎智、山下芳一'
+
+# ブログ（活動履歴）の設定
+blog:
+  disabled: false
+  postsPerPage: 6
+  isRelatedPostsEnabled: true
+  relatedPostsCount: 4
+  post:
+    disabled: false
+    renderFullContent: false
+  list:
+    disabled: false
+  category:
+    disabled: false
+  tag:
+    disabled: false
+
+# 画像の設定（ここが重要です！）
+image:
+  service: 'astro' # Astro 6標準の画像処理を使用
+
+# お問い合わせやSNSの設定
+header:
+  links:
+    - text: 'トップ'
+      href: '/'
+    - text: '活動報告'
+      href: '/blog'
+    - text: 'プロフィール'
+      href: '/about'
+    - text: 'お問い合わせ'
+      href: '/contact'
+
+footer:
+  secondaryLinks:
+    - text: 'プライバシーポリシー'
+      href: '/privacy'
+  socialLinks:
+    - ariaLabel: 'X'
+      icon: 'tabler:brand-x'
+      href: '#' # ご自身のX（旧Twitter）のURL
+    - ariaLabel: 'Facebook'
+      icon: 'tabler:brand-facebook'
+      href: '#' # ご自身のFacebookのURL

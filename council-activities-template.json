@@ -1,0 +1,152 @@
+{
+  "description": "精華町議会活動データ - microCMSインポート用テンプレート",
+  "schema": {
+    "apiId": "council-activities",
+    "fields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "label": "日付"
+      },
+      {
+        "name": "time",
+        "type": "text",
+        "required": false,
+        "label": "時間"
+      },
+      {
+        "name": "activity",
+        "type": "text",
+        "required": true,
+        "label": "活動内容"
+      },
+      {
+        "name": "participant",
+        "type": "text",
+        "required": false,
+        "label": "参加者・役割"
+      },
+      {
+        "name": "url",
+        "type": "text",
+        "required": false,
+        "label": "元ページURL"
+      },
+      {
+        "name": "year",
+        "type": "text",
+        "required": true,
+        "label": "年"
+      },
+      {
+        "name": "month",
+        "type": "text",
+        "required": true,
+        "label": "月"
+      }
+    ]
+  },
+  "sampleData": [
+    {
+      "date": "2024-06-02",
+      "time": "午前9時20分",
+      "activity": "令和6年度精華町ふれあいまつり",
+      "participant": "副議長（議長代理）",
+      "url": "https://www.town.seika.kyoto.jp/gikai/kouhou/katudou/0606/2/25332.html",
+      "year": "令和6年",
+      "month": "6月"
+    }
+  ],
+  "dataSources": {
+    "baseURL": "https://www.town.seika.kyoto.jp/gikai/kouhou/katudou",
+    "structure": {
+      "monthlyIndex": "/index.html",
+      "dailyIndex": "/index.html",
+      "detailPage": "/[id].html"
+    },
+    "availableMonths": [
+      "令和2年5月",
+      "令和2年6月",
+      "令和2年7月",
+      "令和2年8月",
+      "令和2年9月",
+      "令和2年10月",
+      "令和2年11月",
+      "令和2年12月",
+      "令和3年1月",
+      "令和3年2月",
+      "令和3年3月",
+      "令和3年4月",
+      "令和3年5月",
+      "令和3年6月",
+      "令和3年7月",
+      "令和3年8月",
+      "令和3年9月",
+      "令和3年10月",
+      "令和3年11月",
+      "令和3年12月",
+      "令和4年1月",
+      "令和4年2月",
+      "令和4年3月",
+      "令和4年4月",
+      "令和4年5月",
+      "令和4年6月",
+      "令和4年7月",
+      "令和4年8月",
+      "令和4年9月",
+      "令和4年10月",
+      "令和4年11月",
+      "令和4年12月",
+      "令和5年1月",
+      "令和5年2月",
+      "令和5年3月",
+      "令和5年4月",
+      "令和5年5月",
+      "令和5年6月",
+      "令和5年7月",
+      "令和5年8月",
+      "令和5年9月",
+      "令和5年10月",
+      "令和5年11月",
+      "令和5年12月",
+      "令和6年1月",
+      "令和6年2月",
+      "令和6年3月",
+      "令和6年4月",
+      "令和6年5月",
+      "令和6年6月",
+      "令和6年7月",
+      "令和6年8月",
+      "令和6年9月",
+      "令和6年10月",
+      "令和6年11月",
+      "令和6年12月",
+      "令和7年1月",
+      "令和7年2月",
+      "令和7年3月",
+      "令和7年4月",
+      "令和7年5月",
+      "令和7年6月",
+      "令和7年7月",
+      "令和7年8月",
+      "令和7年9月",
+      "令和7年10月",
+      "令和7年11月",
+      "令和7年12月",
+      "令和8年1月",
+      "令和8年2月",
+      "令和8年3月",
+      "令和8年4月",
+      "令和8年5月",
+      "令和8年6月"
+    ]
+  },
+  "importInstructions": {
+    "step1": "microCMSでAPIスキーマを作成（上記schemaを参照）",
+    "step2": "各月のページから活動データを抽出",
+    "step3": "抽出したデータをJSON形式に変換",
+    "step4": "microCMSのバルクインポート機能を使用してインポート",
+    "note": "データ量が多いため、スクリプトで自動化することを推奨"
+  }
+}

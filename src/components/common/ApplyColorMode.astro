@@ -1,0 +1,41 @@
+---
+import { UI } from 'astrowind:config';
+
+// TODO: This code is temporary
+---
+
+<script is:inline define:vars={{ defaultTheme: UI.theme || 'system' }}>
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    const matches = document.querySelectorAll('[data-aw-toggle-color-scheme]');
+
+    if (matches && matches.length) {
+      matches.forEach((elem) => {
+        if (elem.getAttribute) elem.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      });
+    }
+  }
+
+  const storedTheme = (() => {
+    try {
+      return localStorage.getItem('theme');
+    } catch {
+      return null;
+    }
+  })();
+
+  if ((defaultTheme && defaultTheme.endsWith(':only')) || (!storedTheme && defaultTheme !== 'system')) {
+    applyTheme(defaultTheme.replace(':only', ''));
+  } else if (
+    storedTheme === 'dark' ||
+    (!storedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    applyTheme('dark');
+  } else {
+    applyTheme('light');
+  }
+</script>
