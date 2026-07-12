@@ -5,94 +5,100 @@ import Content from '../components/widgets/Content.astro';
 import Steps from '../components/widgets/Steps.astro';
 
 const metadata = {
-  title: 'プロフィール | 精華町議会 爽風会',
+  title: 'About | OMOTENASHI - Miki Inoue',
 };
 
 const profileImage =
-  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
 const memberImage =
-  'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+  'https://images.unsplash.com/photo-1528360983277-13d9b152c611?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
 const heroImage =
-  'https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
 ---
 
 <Layout metadata={metadata}>
   {/* --- 1. プロフィール冒頭 --- */}
   <Hero
-    tagline="Profile"
+    tagline="About Me"
     image={{
       src: profileImage,
-      alt: '爽風会のメンバー',
+      alt: 'Miki Inoue - Travel Interpreter Guide',
     }}
   >
     <Fragment slot="title">
-      精華町の未来を、<br />
-      <span class="text-accent dark:text-white highlight">皆様と共に創る。</span>
+      Your Local Friend in<br />
+      <span class="text-pink-600 dark:text-pink-400 highlight">Japan</span>
     </Fragment>
 
-    <Fragment slot="subtitle"> 爽風会は、精華町の発展と住民の幸せを願い、町政に取り組む議員会派です。 </Fragment>
+    <Fragment slot="subtitle">
+      Dedicated personal guide and Travel Interpreter Guide, offering 100% custom private tours with authentic Japanese
+      hospitality.
+    </Fragment>
   </Hero>
 
-  {/* --- 2. 会派メンバー --- */}
+  {/* --- 2. Services --- */}
   <Steps
-    title="会派メンバー"
+    title="My Services"
     image={{
       src: memberImage,
-      alt: '爽風会のメンバー',
+      alt: 'Travel Guide Services',
     }}
     items={[
       {
-        title: '代表：岡田三郎（おかだ さぶろう）',
-        description: '精華町議会議員。地域の声を町政に届け、より良い街づくりに尽力します。',
-        icon: 'tabler:user-star',
-        callToAction: { text: '詳細を見る', href: '/member/okada-saburo' },
+        title: 'Custom Private Tours',
+        description:
+          '100% personalized tours tailored to your interests, schedule, and preferences. Experience Japan your way.',
+        icon: 'tabler:map',
+        callToAction: { text: 'Learn More', href: '/#destinations' },
       },
       {
-        title: '辻井崇余（つじい みつよ）',
-        description: '精華町議会議員。透明性のある町政運営と財政健全化を推進します。',
-        icon: 'tabler:calculator',
-        callToAction: { text: '詳細を見る', href: '/member/tsujii-mitsuyo' },
+        title: 'Travel Interpretation',
+        description:
+          'Professional interpretation services to help you navigate language barriers and connect with local culture.',
+        icon: 'tabler:language',
+        callToAction: { text: 'Learn More', href: '/#experiences' },
       },
       {
-        title: '尾崎智（おざき さとし）',
-        description: '精華町議会議員。子育て・教育環境の充実に重点を置いて活動します。',
-        icon: 'tabler:school',
-        callToAction: { text: '詳細を見る', href: '/member/ozaki-satoshi' },
+        title: 'Cultural Experiences',
+        description: 'Authentic cultural activities including tea ceremonies, temple visits, and traditional arts.',
+        icon: 'tabler:flower',
+        callToAction: { text: 'Learn More', href: '/#experiences' },
       },
       {
-        title: '山下芳一（やました よしかず）',
-        description: '精華町議会議員。高齢者福祉と防災対策の強化に取り組みます。',
-        icon: 'tabler:heart-handshake',
-        callToAction: { text: '詳細を見る', href: '/member/yamashita-yoshikazu' },
+        title: 'Local Expertise',
+        description: 'Insider knowledge of hidden gems, local restaurants, and off-the-beaten-path destinations.',
+        icon: 'tabler:star',
+        callToAction: { text: 'Learn More', href: '/#about' },
       },
     ]}
   />
 
-  {/* --- 3. 会派の理念 --- */}
+  {/* --- 3. Philosophy --- */}
   <Content
     isReversed
-    title="会派の理念"
-    subtitle="爽風会が目指す町政"
+    title="OMOTENASHI Philosophy"
+    subtitle="Japanese Hospitality at Its Finest"
     items={[
       {
-        title: '住民参加型の町政',
-        description: '住民の声を真摯に聴き、町政に反映させることで、開かれた議会運営を目指します。',
+        title: 'Personalized Experience',
+        description:
+          'Every tour is crafted specifically for you, ensuring your journey through Japan is unique and memorable.',
         icon: 'tabler:users',
       },
       {
-        title: '透明性と説明責任',
-        description: '議会活動の情報を積極的に公開し、住民の皆様に分かりやすく説明します。',
-        icon: 'tabler:eye',
+        title: 'Authentic Connections',
+        description: 'Experience Japan like a local, with genuine connections to culture, people, and traditions.',
+        icon: 'tabler:heart',
       },
       {
-        title: '地域の課題解決',
-        description: '少子高齢化、防災、経済活性化など、地域が直面する課題に実効性のある対策を提案します。',
-        icon: 'tabler:target',
+        title: 'Warm Hospitality',
+        description: 'OMOTENASHI spirit ensures you feel welcome, cared for, and at home throughout your journey.',
+        icon: 'tabler:flower',
       },
     ]}
     image={{
       src: heroImage,
-      alt: '精華町の風景',
+      alt: 'Japanese culture and hospitality',
     }}
   />
 </Layout>
