@@ -1,12 +1,12 @@
 # サイト全体の基本情報
 site:
-  name: 'せいか自然観察倶楽部'
+  name: 'OMOTENASHI'
   site: 'https://nature-club-site.vercel.app'
   base: '/'
   trailingSlash: false
 
-  title: 'せいか自然観察倶楽部'
-  description: '精華町の未来を切り拓く。爽風会の活動報告、政策、プロフィールをお届けします。代表：岡田三郎、経理責任者：辻井崇余、メンバー：尾崎智、山下芳一'
+  title: 'OMOTENASHI - Miki Inoue | Travel Interpreter Guide'
+  description: 'Dedicated personal guide and Travel Interpreter Guide. 100% custom private tours with a local friend. Explore Tokyo, Kyoto, Osaka, Hiroshima & more.'
 
 # ブログ（活動履歴）の設定
 blog:

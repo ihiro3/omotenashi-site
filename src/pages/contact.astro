@@ -5,11 +5,11 @@ import Hero from '../components/widgets/Hero.astro';
 import Features2 from '../components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'お問い合わせ・事務所案内 | 精華町議会 爽風会',
+  title: 'Contact | OMOTENASHI - Miki Inoue',
 };
 
 const heroImage =
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
 ---
 
 <Layout metadata={metadata}>
@@ -18,68 +18,72 @@ const heroImage =
     tagline="Contact"
     image={{
       src: heroImage,
-      alt: 'お問い合わせ',
+      alt: 'Contact Miki Inoue',
     }}
   >
     <Fragment slot="title">
-      問い合わせ・<br />
-      <span class="text-accent dark:text-white highlight">事務局案内</span>
+      Let's Plan Your<br />
+      <span class="text-pink-600 dark:text-pink-400 highlight">Japanese Adventure</span>
     </Fragment>
 
-    <Fragment slot="subtitle"> 町政に関するご相談や、地域の課題についてお気軽にご連絡ください。 </Fragment>
+    <Fragment slot="subtitle">
+      Ready to explore Japan with a local friend? Get in touch to start planning your custom tour.
+    </Fragment>
   </Hero>
 
-  {/* 2. 事務所情報（追加部分） */}
+  {/* 2. Contact Information */}
   <Features2
-    title="精華町議会 爽風会"
-    subtitle="町政に関するご相談や、地域の課題についてお気軽にご連絡ください。"
+    title="Get in Touch"
+    subtitle="I'm here to help you plan the perfect Japanese experience. Reach out through any of these channels."
     items={[
       {
-        title: '所在地',
-        description: '〒619-0237<br />京都府相楽郡精華町精華台1丁目<br />精華町議会 爽風会',
-        icon: 'tabler:map-pin',
+        title: 'Email',
+        description: 'contact@omotenashi-japan.com<br />For tour inquiries and bookings',
+        icon: 'tabler:mail',
       },
       {
-        title: '電話',
-        description: '精華町議会 爽風会: 0774-93-2150<br />（代表：岡田三郎）',
+        title: 'Phone / WhatsApp',
+        description: '+81-90-XXXX-XXXX<br />Available for urgent inquiries',
         icon: 'tabler:phone',
       },
       {
-        title: '受付時間',
-        description: '議会開催日: 9:00 〜 17:00<br />（土日祝・年末年始を除く）',
+        title: 'Response Time',
+        description: 'Usually within 24 hours<br />Tours available 7 days a week',
         icon: 'tabler:clock',
       },
     ]}
   />
 
-  {/* 3. メッセージ送信フォーム（以前のものも残した状態） */}
+  {/* 3. メッセージ送信フォーム */}
   <ContactUs
     id="form"
-    title="メッセージを送る"
-    subtitle="地域の皆様の声が、より良い街づくりの原動力です。"
+    title="Send Me a Message"
+    subtitle="Tell me about your dream Japan experience and I'll help make it happen."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'お名前',
+        label: 'Your Name',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'メールアドレス',
+        label: 'Email Address',
       },
     ]}
     textarea={{
-      label: 'メッセージ内容',
+      label: 'Tell me about your travel plans, interests, and any questions you have.',
     }}
     disclaimer={{
-      label: '送信いただいた個人情報は、お問い合わせへの回答のみに使用いたします。',
+      label: 'Your personal information will only be used to respond to your inquiry.',
     }}
-    button="メッセージを送信する（Google フォームへ）"
+    button="Send Message"
   />
 
   {/* 補足：フォームの動作について */}
   <div class="max-w-3xl mx-auto text-center pb-24 px-4">
-    <p class="text-sm text-gray-500">※ 上記ボタンを押すと、安全にメッセージを届けるため Google フォームが開きます。</p>
+    <p class="text-sm text-gray-500">
+      I typically respond within 24 hours. Let's start planning your Japanese adventure!
+    </p>
   </div>
 </Layout>

@@ -7,21 +7,21 @@ import Testimonials from '../components/widgets/Testimonials.astro';
 import Layout from '../layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Services | OMOTENASHI - Miki Inoue',
 };
 
 const heroImage =
-  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
+  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80';
 const featuresImage =
-  'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80';
+  'https://images.unsplash.com/photo-1528360983277-13d9b152c611?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80';
 const benefitsImage =
-  'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80';
+  'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80';
 const testimonialImageEmily =
-  'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80';
+  'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=930&q=80';
 const testimonialImageSarah =
-  'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80';
+  'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80';
 const testimonialImageMark =
-  'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80';
+  'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=824&q=80';
 ---
 
 <Layout metadata={metadata}>
@@ -29,73 +29,74 @@ const testimonialImageMark =
 
   <Hero
     tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Discover Japan Your Way"
+    subtitle="Experience authentic Japan through personalized guided tours. From cultural immersion to hidden local gems, I craft custom experiences tailored to your interests and schedule."
+    actions={[{ variant: 'primary', target: '_self', text: 'Contact Me', href: '/contact' }]}
     image={{
       src: heroImage,
-      alt: 'AstroWind Hero Image',
+      alt: 'Japan travel experience',
     }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Tour Services"
+    subtitle="Choose from my range of personalized travel experiences."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Custom Private Tours',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+          'Tailor-made itineraries designed around your interests, pace, and preferences. Experience Japan exactly how you want to.',
+        icon: 'tabler:map',
       },
       {
-        title: 'Interior Design',
+        title: 'Cultural Experiences',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+          'Deep dive into Japanese culture with tea ceremonies, temple visits, traditional arts, and authentic local activities.',
+        icon: 'tabler:flower',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
+        title: 'Travel Interpretation',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+          'Professional interpretation services to help you communicate with locals and navigate language barriers with ease.',
+        icon: 'tabler:language',
       },
       {
-        title: 'Blog',
+        title: 'Day Tours',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
+          'Perfect day trips from Tokyo, Kyoto, Osaka, and Hiroshima. Explore iconic landmarks and hidden gems in a single day.',
+        icon: 'tabler:sun',
       },
       {
-        title: 'Business',
+        title: 'Multi-Day Tours',
         description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
+          'Comprehensive multi-city itineraries covering multiple destinations. Let me handle all the logistics while you enjoy.',
+        icon: 'tabler:calendar',
       },
       {
-        title: 'Branding',
+        title: 'Special Experiences',
         description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
+          'Seasonal festivals, cherry blossom viewing, autumn foliage, and other unique Japanese experiences timed perfectly.',
+        icon: 'tabler:star',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
+        title: '🍣 Food Tours',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+          'Discover Japan incredible culinary scene from street food to fine dining. Local restaurants and hidden food gems.',
+      },
+      {
+        title: 'Photography Tours',
+        description:
+          'Capture stunning images of Japan most photogenic spots with guidance on the best locations and timing.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Family Tours',
+        description:
+          'Family-friendly itineraries with activities for all ages. Educational, fun, and memorable experiences for everyone.',
+        icon: 'tabler:users',
       },
     ]}
   />
@@ -106,37 +107,37 @@ const testimonialImageMark =
     isReversed
     items={[
       {
-        title: 'High-Quality Designs',
+        title: 'Local Expertise',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
+          'As a certified Travel Interpreter Guide, I bring deep knowledge of Japanese culture, history, and hidden local spots that most tourists never discover.',
+        icon: 'tabler:map-star',
       },
       {
-        title: 'Customization Tools',
+        title: 'Personalized Planning',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
+          'Every detail is tailored to you - from accommodation preferences to dietary needs, activity levels, and cultural interests.',
         icon: 'tabler:settings',
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Hassle-Free Experience',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
+          'I handle all logistics including transportation, reservations, and navigation so you can focus on enjoying your journey.',
+        icon: 'tabler:checklist',
       },
       {
-        title: 'Preview and Mockup Views',
+        title: 'Authentic Connections',
         description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
+          'Experience genuine Japanese hospitality and connect with local people, traditions, and culture in meaningful ways.',
+        icon: 'tabler:heart-handshake',
       },
     ]}
     image={{
       src: featuresImage,
-      alt: 'Features Image',
+      alt: 'Japanese cultural experience',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose Me</h3>
     </Fragment>
   </Content>
 
@@ -146,67 +147,67 @@ const testimonialImageMark =
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Save Time',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+          'Skip the research and planning headaches. I handle everything so you can maximize your time experiencing Japan.',
         icon: 'tabler:clock',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Local Insights',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
+          'Access knowledge that guidebooks don have - secret spots, best times to visit, and local recommendations from a resident expert.',
+        icon: 'tabler:bulb',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Stress-Free Travel',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
+          'Navigate Japan with confidence. No language barriers, no getting lost, no missed connections - just smooth, enjoyable travel.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Instant Download',
+        title: 'Flexible Scheduling',
         description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+          'Tours available 7 days a week with flexible timing. Early morning starts or late evening explorations - whatever suits you.',
+        icon: 'tabler:calendar-time',
       },
     ]}
     image={{
       src: benefitsImage,
-      alt: 'Benefits Image',
+      alt: 'Stress-free Japan travel',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Tour Benefits</h3>
     </Fragment>
   </Content>
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from real customers"
+    title="What My Guests Say"
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        testimonial: `Miki made our Japan trip absolutely incredible. Her local knowledge took us to places we never would have found on our own. The tea ceremony experience was unforgettable!`,
         name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        job: 'Traveler from USA',
         image: {
           src: testimonialImageEmily,
           alt: 'Emily Kennedy Image',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        testimonial: `As a solo female traveler, I felt completely safe and well-cared for. Miki's interpretation skills were invaluable, and she introduced me to authentic Japanese culture I couldn't have experienced otherwise.`,
         name: 'Sarah Hansen',
-        job: 'Photographer',
+        job: 'Traveler from Australia',
         image: {
           src: testimonialImageSarah,
           alt: 'Sarah Hansen Image',
         },
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        testimonial: `Our family tour with Miki was perfect. She balanced activities for all ages and even accommodated my dietary restrictions. The kids still talk about the cherry blossom viewing!`,
         name: 'Mark Wilkinson',
-        job: 'Small business owner',
+        job: 'Family traveler from UK',
         image: {
           src: testimonialImageMark,
           alt: 'Mark Wilkinson Image',
@@ -214,9 +215,9 @@ const testimonialImageMark =
       },
     ]}
     callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/arthelokyo/astrowind',
+      target: '_self',
+      text: 'Contact me to plan your tour',
+      href: '/contact',
       icon: 'tabler:chevron-right',
     }}
   />
@@ -227,11 +228,11 @@ const testimonialImageMark =
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        text: 'Start Your Journey',
+        href: '/contact',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="Ready to Experience Authentic Japan?"
+    subtitle="Let's create your perfect custom tour together. Contact me to start planning your Japanese adventure."
   />
 </Layout>
