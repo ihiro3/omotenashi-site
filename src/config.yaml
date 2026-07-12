@@ -1,8 +1,8 @@
 # サイト全体の基本情報
 site:
   name: 'OMOTENASHI'
-  site: 'https://nature-club-site.vercel.app'
-  base: '/'
+  site: 'https://ihiro3.github.io/omotenashi-site'
+  base: '/omotenashi-site/'
   trailingSlash: false
 
   title: 'OMOTENASHI - Miki Inoue | Travel Interpreter Guide'
