@@ -1,7 +1,7 @@
 # サイト全体の基本情報
 site:
   name: 'OMOTENASHI'
-  site: 'https://nature-club-site.vercel.app'
+  site: 'https://omotenashi-site.pages.dev'
   base: '/'
   trailingSlash: false
 
