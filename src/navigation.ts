@@ -1,5 +1,4 @@
 import type { CallToAction } from './types.d.ts';
-import { getPermalink } from './utils/permalinks.ts';
 
 type HeaderLink = {
   text: string;
@@ -12,13 +11,13 @@ export const headerData: {
   actions: CallToAction[];
 } = {
   links: [
-    { text: 'Home', href: getPermalink('/#home') },
-    { text: 'Destinations', href: getPermalink('/#destinations') },
-    { text: 'Experiences', href: getPermalink('/#experiences') },
-    { text: 'About', href: getPermalink('/#about') },
-    { text: 'Services', href: getPermalink('/services') },
+    { text: 'Home', href: '/#home' },
+    { text: 'Destinations', href: '/#destinations' },
+    { text: 'Experiences', href: '/#experiences' },
+    { text: 'About', href: '/#about' },
+    { text: 'Services', href: '/services' },
   ],
-  actions: [{ text: 'Contact Me', href: getPermalink('/contact'), variant: 'primary' }],
+  actions: [{ text: 'Contact Me', href: '/contact', variant: 'primary' }],
 };
 
 export const footerData = {
@@ -26,17 +25,17 @@ export const footerData = {
     {
       title: 'Menu',
       links: [
-        { text: 'Home', href: getPermalink('/#home') },
-        { text: 'Destinations', href: getPermalink('/#destinations') },
-        { text: 'Experiences', href: getPermalink('/#experiences') },
+        { text: 'Home', href: '/#home' },
+        { text: 'Destinations', href: '/#destinations' },
+        { text: 'Experiences', href: '/#experiences' },
       ],
     },
     {
       title: 'About',
       links: [
-        { text: 'About Me', href: getPermalink('/about') },
-        { text: 'Services', href: getPermalink('/services') },
-        { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'About Me', href: '/about' },
+        { text: 'Services', href: '/services' },
+        { text: 'Contact', href: '/contact' },
       ],
     },
   ],

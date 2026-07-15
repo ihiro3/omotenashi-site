@@ -26,8 +26,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://ihiro3.github.io/omotenashi-site',
-  base: process.env.BASE_URL || '/omotenashi-site/',
+  site: process.env.SITE_URL || 'https://nature-club-site.vercel.app',
+  base: process.env.BASE_URL || '/',
   output: 'static',
 
   integrations: [
