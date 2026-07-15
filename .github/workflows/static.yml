@@ -41,9 +41,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
-        env:
-          SITE_URL: 'https://ihiro3.github.io/omotenashi-site'
-          BASE_URL: '/omotenashi-site/'
 
       - name: Create .nojekyll
         run: touch ./dist/.nojekyll
