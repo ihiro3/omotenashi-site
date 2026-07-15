@@ -1,6 +1,5 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { config } from 'dotenv';
 
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
@@ -16,9 +15,6 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter';
 
-// Load environment variables from .env files
-config();
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -26,12 +22,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://ihiro3.github.io/omotenashi-site',
-  base: process.env.BASE_URL || '/omotenashi-site/',
-  trailingSlash: 'never',
-  build: {
-    format: 'file',
-  },
+  site: 'https://omotenashi-site.pages.dev',
+  base: '/',
   output: 'static',
 
   integrations: [

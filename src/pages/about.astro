@@ -3,7 +3,6 @@ import Layout from '../layouts/PageLayout.astro';
 import Hero from '../components/widgets/Hero.astro';
 import Content from '../components/widgets/Content.astro';
 import Steps from '../components/widgets/Steps.astro';
-import { getPermalink } from '../utils/permalinks.ts';
 
 const metadata = {
   title: 'About | OMOTENASHI - Miki Inoue',
@@ -50,26 +49,26 @@ const heroImage =
         description:
           '100% personalized tours tailored to your interests, schedule, and preferences. Experience Japan your way.',
         icon: 'tabler:map',
-        callToAction: { text: 'Learn More', href: getPermalink('/#destinations') },
+        callToAction: { text: 'Learn More', href: '/#destinations' },
       },
       {
         title: 'Travel Interpretation',
         description:
           'Professional interpretation services to help you navigate language barriers and connect with local culture.',
         icon: 'tabler:language',
-        callToAction: { text: 'Learn More', href: getPermalink('/#experiences') },
+        callToAction: { text: 'Learn More', href: '/#experiences' },
       },
       {
         title: 'Cultural Experiences',
         description: 'Authentic cultural activities including tea ceremonies, temple visits, and traditional arts.',
         icon: 'tabler:flower',
-        callToAction: { text: 'Learn More', href: getPermalink('/#experiences') },
+        callToAction: { text: 'Learn More', href: '/#experiences' },
       },
       {
         title: 'Local Expertise',
         description: 'Insider knowledge of hidden gems, local restaurants, and off-the-beaten-path destinations.',
         icon: 'tabler:star',
-        callToAction: { text: 'Learn More', href: getPermalink('/#about') },
+        callToAction: { text: 'Learn More', href: '/#about' },
       },
     ]}
   />

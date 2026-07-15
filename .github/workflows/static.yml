@@ -39,11 +39,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Create .env for GitHub Pages
-        run: |
-          echo "SITE_URL=https://ihiro3.github.io/omotenashi-site" > .env
-          echo "BASE_URL=/omotenashi-site/" >> .env
-
       - name: Build
         run: pnpm run build
 
