@@ -28,10 +28,6 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   site: process.env.SITE_URL || 'https://ihiro3.github.io/omotenashi-site',
   base: process.env.BASE_URL || '/omotenashi-site/',
-  trailingSlash: 'always',
-  build: {
-    format: 'directory',
-  },
   output: 'static',
 
   integrations: [
